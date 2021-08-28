@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Climate Box - Control Me</title>
+    <link rel="stylesheet" href="style/screen.css" />
+    <link rel="stylesheet" href="style/normalize.css" />
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script>
+    <script src="script/dataHandler.js"></script>
+    <script src="script/app-controlme.js"></script>
+  </head>
+  <body class="control-body">
+    <h1>Climate Box</h1>
+    <div class="b-control-links">
+      <a href="./index.html"><button class="b-app-link"><span>Home</span></button></a>
+      <a href="./graphs.html"><button class="b-app-link"><span>Graphs</span></button></a>
+    </div>
+    <h2>Control Me</h2>
+    <div class="c-color">
+      <input class="js-colorpicker c-colorpicker" type="color">
+    </div>
+    <button class="js-send b-color c-button-control">Send</button>
+    <button class="js-reset b-color c-button-control">Reset</button>
+    <footer>&copy; 2021 - Climate Box</footer>
+  </body>
+</html>
