@@ -12,32 +12,6 @@ class DataRepository:
             gegevens = request.form.to_dict()
         return gegevens
 
-#region Diero
-    # @staticmethod
-    # def read_status_lampen():
-    #     sql = "SELECT * from lampen"
-    #     return Database.get_rows(sql)
-
-    # @staticmethod
-    # def read_status_lamp_by_id(id):
-    #     sql = "SELECT * from lampen WHERE id = %s"
-    #     params = [id]
-    #     return Database.get_one_row(sql, params)
-
-    # @staticmethod
-    # def update_status_lamp(id, status):
-    #     sql = "UPDATE lampen SET status = %s WHERE id = %s"
-    #     params = [status, id]
-    #     return Database.execute_sql(sql, params)
-
-    # @staticmethod
-    # def update_status_alle_lampen(status):
-    #     sql = "UPDATE lampen SET status = %s"
-    #     params = [status]
-    #     return Database.execute_sql(sql, params)
-#region end
-
-#region Emiel
     @staticmethod
     def add_temperature_record(temperature):
         sql = 'INSERT INTO climatebox.meting VALUES(null, %s, "TEMP", %s)'
@@ -97,4 +71,3 @@ class DataRepository:
         sql = 'SELECT Color FROM climatebox.actuatorhistoriek ORDER BY DateTaken DESC LIMIT %s'
         params = [amount]
         return Database.get_rows(sql, params)
-#region end
